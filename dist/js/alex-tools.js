@@ -6,17 +6,16 @@
      } else if (typeof exports === "object" && typeof module !== "undefined") {
          module.exports = factory(root);
      } else {
-         root.MMTools = factory(root);
+         root.alexTools = factory(root);
      }
  })(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this, function (window) {
-     var mixmediaToolsFactory = function () {
+     var alexToolsFactory = function () {
 
 
 
 
          /**
-          * 这个是mixmedia的前端工具库，写入常用的method，或把兼容性不好的es5 api 补丁到这里，日后方便大家开发，
-          * 欢迎各位同事来添加api
+          * 这个是Alex的前端工具库，写入常用的method，或把兼容性不好的es5 api 补丁到这里，日后方便开发，
           */
          var publicApis = {};
 
@@ -153,5 +152,5 @@
 
      }
 
-     return mixmediaToolsFactory();
+     return alexToolsFactory();
  })
