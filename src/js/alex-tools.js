@@ -146,6 +146,18 @@
              }
              return target
          }
+         
+         /** 
+          * 创建js缓存
+          * @return {Function}  返回一个含有cache方法
+          */
+         publicApis.createCache = function () {
+            var keys = []
+            function cache(key, value) {         
+                return cache[key] ? cache[key] : (cache[key] = value);
+            }
+            return cache;
+        }
 
          //return apis
          return publicApis;
